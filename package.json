@@ -1,0 +1,29 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "My Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/main.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/main.comp.css",
+    "concat:css": "concat -o css/main.concat.css css/icon-fonts.css css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b  \"last 10 versions\" css/main.concat.css -o css/main.prefix.css",
+    "compress:css": "node-sass css/main.prefix.css css/main.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "author": "Princewill Ogbo",
+  "license": "ISC",
+  "dependencies": {
+    "concat": "^1.0.3",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "nodemon": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.3"
+  }
+}

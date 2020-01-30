@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #ccc;
+  padding: 10px;
+  /*height: 1500px;*/
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  background-color: #f1425d;
+  padding: 30px;
+  margin: 30px;
+  color: #fff;
+  font-size: 40px;
+}
+
+.i3 {
+  height: 200px;
+  order: -2;
+  /*
+  flex-basis: 300px;
+  flex-shrink: 0;*/
+  flex: 0 1 300px;
+ 
+}
+
+.i4 {
+  height: 200px;
+  order: 1;
+  flex: -1;
+}
+
+.i5 {
+  align-self: flex-end;
+  order: -1;
+}
+
+
+
+
+
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item i3">3</div>
+  <div class="item i4">4</div>
+  <div class="item i5">5</div>
+  <div class="item">6</div>
+</div>
